@@ -9,11 +9,12 @@ module Mastermind
     end
 
     def display
-      return display unless display == ""
+      return @display unless @display == ""
 
-      @colors.each("") do |c|
+      @colors.each do |c|
         @display << "⬮".colorize(c)
       end
+      @display
     end
 
     def to_s
