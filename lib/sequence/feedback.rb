@@ -22,6 +22,10 @@ module Mastermind
       Feedback.new(whites, reds)
     end
 
+    def correct?
+      @reds == 4
+    end
+
     def to_seq
       beads = []
       @whites.times { beads << :white }
