@@ -5,7 +5,7 @@ module Mastermind
       %i[blue yellow red green]
     end
 
-    def feedback(guess)
+    def give_feedback(guess)
       # TODO: fill method
     end
   end
