@@ -1,4 +1,5 @@
 require_relative "../guesser"
+require_relative "../sequence"
 
 module Mastermind
   # Human guesser class
@@ -6,7 +7,7 @@ module Mastermind
     def make_guess
       # debugger
       puts "Enter a guess. Your guess should be a sequence of 4 colors, separated by space."
-      puts "Available colors: red, green, blue, yellow, magenta, cyan, grey and white"
+      puts "Available colors: #{Sequence.colors.first(difficulty).join(', ')}"
       input = gets.chomp.downcase.split.map(&:to_sym)
       super(input)
     end
