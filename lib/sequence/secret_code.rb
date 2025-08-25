@@ -1,3 +1,5 @@
+require_relative "../sequence"
+
 module Mastermind
   # Class containing a secrete code. Validates sequence on initializing
   class SecretCode < Sequence
