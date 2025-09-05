@@ -8,7 +8,7 @@ module Mastermind
 
     def initialize(difficulty = 6)
       self.difficulty = difficulty
-      super
+      super()
     end
 
     def make_guess

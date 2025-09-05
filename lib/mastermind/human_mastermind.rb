@@ -7,15 +7,20 @@ module Mastermind
   # Human player as Mastermind
   class HumanMastermind < Mastermind
     def generate_code
+      input = []
+      validate_inputt = []
       loop do
         puts "Create a code consisting of 4 distinct colors."
         puts "Available colors: #{Sequence.colors.first(difficulty).join ', '}"
         input = gets.chomp.split.map(&:to_sym)
         # TODO: Clean this mess
         break if validate_input(input)
+        
+        
 
         puts "Secret code must be a sequence of 4 distinct colors from available color list"
       end
+      self.code = SecretCode.new(input)
     end
 
     def give_feedback(guess)
